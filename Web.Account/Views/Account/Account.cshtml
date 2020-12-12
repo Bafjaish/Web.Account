@@ -1,0 +1,69 @@
+﻿@model Web.Account.Models.tbl_Account
+@{
+    ViewBag.Title = "Account";
+}
+
+<h3> Add Account</h3>
+
+<style>
+
+    .error {
+      color:red;
+
+    }
+
+</style>
+
+@using (Html.BeginForm("AddAccount", "Account", FormMethod.Post))
+{
+
+    <div class="container">
+        <div class="form-group">
+            @Html.HiddenFor(x=> x.RefNo)
+            <label>Account Number</label>
+            @Html.ValidationMessageFor(x => x.AccountNumber, "", new { @class ="error" })
+            @Html.TextBoxFor(x => x.AccountNumber, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <label>Account Holder</label>
+            @Html.ValidationMessageFor(x => x.AccountHolder, "", new { @class = "error" })
+            @Html.TextBoxFor(x => x.AccountHolder, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <label>Current Balance</label>
+            @Html.ValidationMessageFor(x => x.CurrentBalace, "", new { @class = "error" })
+            @Html.TextBoxFor(x => x.CurrentBalace, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <label>Bank Name</label>
+            @Html.ValidationMessageFor(x => x.BankName, "", new { @class = "error" })
+            @Html.TextBoxFor(x => x.BankName, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <label>Opening Date</label>
+            @Html.ValidationMessageFor(x => x.OpeningDate, "", new { @class = "error" })
+            @Html.TextBoxFor(x => x.OpeningDate, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <label>Is Active</label>
+            @Html.ValidationMessageFor(x => x.IsActive, "", new { @class = "error" })
+            @Html.TextBoxFor(x => x.IsActive, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Add </button>
+            <button type="reset" class="btn btn-danger">Cancel </button>
+
+        </div>
+
+
+
+    </div>
+
+}
+

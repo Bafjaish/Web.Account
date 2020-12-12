@@ -1,0 +1,39 @@
+﻿@model List<Web.Account.Models.tbl_Account>
+@{
+    ViewBag.Title = "AccountList";
+}
+<table class="table table-bordered table table-hover"   >
+    <tr>
+        <th>Account Number</th>
+        <th>Account Holder</th>
+        <th>Current Balance</th>
+        <th>Bank Name</th>
+        <th>Opening Date</th>
+        <th>Is Active</th>
+        <th>Action</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    { 
+       <tr>
+
+              <td> @item.AccountNumber </td>
+              <td> @item.AccountHolder </td>
+              <td> @item.CurrentBalace </td>
+              <td> @item.BankName </td>
+              <td> @item.OpeningDate </td>
+              <td> @item.IsActive </td>
+
+
+
+    <td>
+        <a href="@Url.Action("Account", new {item.RefNo,item.AccountNumber,item.AccountHolder,item.CurrentBalace, item.BankName, item.OpeningDate, item.IsActive})" class="btn btn-success">Edit</a>
+        <a href="@Url.Action("Delete", new  { item.RefNo })" class="btn btn-danger">Delete</a>
+
+    </td>
+
+</tr>
+    }
+</table>
+
