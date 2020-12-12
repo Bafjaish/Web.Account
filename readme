@@ -1,0 +1,9 @@
+1.first, I have created the databse using sql server 2019
+2. cereate the table inside the datatase
+3. please take note that, I have added one more feild RefNo, as to be the the primary Key, becuase the requiremnts says that the account number is string, sp I have to create the Refno feild.
+4. ctrea the project with VS mvc.
+5. I have created the model in in which it used to the connect the app with the sql server, the connection strting is automtcailly will be added to the webconfig., as i hvace test the connection and it wrrks
+6. in sid the model class I have changed some of the properties to be required. for the valdation purpose.
+7. I have created the controller whiche named as accountcontroller, it has (add, update, deleted, read).
+8. I have used some external libiraries like the extenstion for the purpose of allwoing the notifcation.
+9. I hav tested the app and it works, I uploaded screeshot of it.
